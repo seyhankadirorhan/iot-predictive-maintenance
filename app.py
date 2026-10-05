@@ -1,3 +1,15 @@
+import sys
+import traceback
+
+try:
+    # Mevcut kodlarınız burada başlıyor
+    import streamlit as st
+    # ...
+except Exception as e:
+    st.error("Uygulama başlatılırken kritik bir hata oluştu:")
+    st.code(traceback.format_exc())
+    raise e
+
 """Streamlit dashboard for AI4I 2020 predictive maintenance."""
 from __future__ import annotations
 
